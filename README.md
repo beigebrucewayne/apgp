@@ -2,6 +2,8 @@
 
 Easily transfer data from Redshift to Pandas.
 
+![logo](https://i.imgur.com/5E84say.png)
+
 ## Features
 
 - Query Redshift and receive response as pd.DataFrame()
