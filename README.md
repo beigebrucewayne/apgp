@@ -2,7 +2,7 @@
 
 Easily transfer data from Redshift to Pandas.
 
-![logo](https://i.imgur.com/5E84say.png)
+![logo](https://i.imgur.com/PeL46uS.png)
 
 ## Features
 
