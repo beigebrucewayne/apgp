@@ -21,29 +21,37 @@ class S3:
 
     @staticmethod
     def bucket_files(bucket):
-        content = s3.list_buckets(Bucket=bucket)['Contents']
+        content = s3.list_objects(Bucket=bucket)['Contents']
         return [key['Key'] for key in content]
 
     @staticmethod
-    def download(bucket, key, file):
+    def download(bucket: str, file: str, folder: str = None):
         try:
-            s3.download_file(bucket, key, file)
+            s3.download_file(bucket, key, folder)
         except Exception as e:
             print(e)
             print(f"Error downloading {file} from {bucket}")
             raise e
 
     @staticmethod
-    def upload(bucket, key, file):
-        try:
-            s3.upload_file(file, bucket, key)
-        except Exception as e:
-            print(e)
-            print(f"Error uploading {file} to {bucket}")
-            raise e
+    def upload(file: str, bucket: str, folder: str = None):
+        if folder is None:
+            try:
+                s3.upload_file(file, bucket, file)
+            except Exception as e:
+                print(e)
+                print(f"Error uploading {file} to {bucket}")
+                raise e
+        else:
+            try:
+                s3.upload_file(file, bucket, folder)
+            except Exception as e:
+                print(e)
+                print(f"Error uploading {file} to {bucket}")
+                raise e
 
     @staticmethod
-    def to_s3(bucket, dataframe, filename):
+    def to_s3(bucket: str, dataframe: object, filename: str):
         csv_buffer = StringIO()
         dataframe.to_csv(csv_buffer)
         name_of_file = filename

@@ -1,1 +1,1 @@
-from red_pandas.core import *
+from red_pandas.red_pandas import *
