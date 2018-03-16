@@ -1,8 +1,15 @@
 # Red Pandas
+![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)
 
 Easily transfer data from Redshift to Pandas.
 
 ![logo](https://i.imgur.com/PeL46uS.png)
+
+## TODO
+
+- [ ] Replace psycopg2 with [asyncpg](https://github.com/MagicStack/asyncpg)
+- [ ] Finish type annotations
+- [ ] Additional convenience methods for S3
 
 ## Features
 
