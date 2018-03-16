@@ -1,9 +1,8 @@
 # PG Pandas - WIP
+Easily transfer data from Postgres (using asyncpg) to Pandas with additional support for Redshfit.
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)
 
-Easily transfer data from Postgres (using asyncpg) to Pandas with additional support for Redshfit.
-
-![logo](https://i.imgur.com/PeL46uS.png)
+![logo](https://i.imgur.com/JTKlXCC.png)
 
 ## TODO
 
