@@ -21,10 +21,11 @@ Easily transfer data from Postgres (using asyncpg) to Pandas with additional sup
 
 ## Setup
 
-In order to connect in one step you will need a `config.yaml` file in your project root. The format mirror the following:
+In order to connect in one step you will need a `config.yaml` file in your project root.
+You can see an an example in the `config.yaml.example` file.
 
 ```yaml
-dbname: 'dbname'
+database: 'dbname'
 host: 'host'
 port: 5439
 user: 'username'
