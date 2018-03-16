@@ -12,7 +12,7 @@ Easily transfer data from Postgres (using asyncpg) to Pandas with additional sup
 - [ ] Finish type annotations
 - [ ] Additional convenience methods for S3
 - [ ] Take out AWS Creds, instead set with aws-cli
-- [ ] Add proper column names from PG
+- [x] Add proper column names from PG
 
 ## Features
 
