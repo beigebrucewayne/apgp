@@ -8,8 +8,7 @@ name = "pypi"
 [packages]
 
 pandas = "*"
-"boto3" = "*"
-PyYAML = "*"
+pyyaml = "*"
 asyncpg = "*"
 
 

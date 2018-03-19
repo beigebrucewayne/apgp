@@ -2,7 +2,7 @@ import os
 import yaml
 
 
-def read_config() -> str:
+def _read_config() -> str:
 
     current_dir = os.path.abspath(os.curdir)
     file_path = os.path.join(current_dir, 'config.yaml')
