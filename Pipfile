@@ -9,8 +9,7 @@ name = "pypi"
 
 pandas = "*"
 "boto3" = "*"
-pyyaml = "*"
-"psycopg2-binary" = "*"
+PyYAML = "*"
 asyncpg = "*"
 
 
