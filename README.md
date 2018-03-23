@@ -5,6 +5,12 @@ Asynchronously read data from Postgres, returned as a Pandas dataframe.
 
 ![logo](https://i.imgur.com/JTKlXCC.png)
 
+## Installation
+
+```bash
+pip install apgp
+```
+
 ## Example
 
 ```python
