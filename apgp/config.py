@@ -2,9 +2,6 @@ import os
 import yaml
 
 
-from .exceptions import ConfigYamlReadError
-
-
 def _read_config() -> str:
     """Read In Database Credentials
 
@@ -22,7 +19,8 @@ def _read_config() -> str:
             config = yaml.load(file)
             dsn = f'postgresql://{config["user"]}:{config["password"]}@{config["host"]}:{config["port"]}/{config["database"]}'
             return dsn
-    except ConfigYamlReadError as e:
+
+    except IOError as e:
         print("""
         Could not find configuration file `config.yaml` in current directory.
 

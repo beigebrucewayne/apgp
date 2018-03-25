@@ -1,2 +1,0 @@
-class ConfigYamlReadError(Exception):
-    pass
