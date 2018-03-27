@@ -10,6 +10,9 @@ def _read_config() -> str:
     it uses each part to generate the DSN. This DSN is then passed
     through to `asyncpg` in order to connect without having to manually
     enter your credentials everytime.
+
+    :returns: dsn, connection string
+    :rtype: str
     """
     current_dir = os.path.abspath(os.curdir)
     file_path = os.path.join(current_dir, 'config.yaml')

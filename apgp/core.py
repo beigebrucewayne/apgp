@@ -14,14 +14,20 @@ class Query:
     supplied to close the event loop. Thus, disallowing
     any further queries.
 
-    Example:
+    **Advantages**:
+        - In theory, 3x times faster than psycopg2
+
+    :param query: sql query
+    :type query: str
+
+    :Example:
 
     >>> from apgp import Query
     >>> q = Query('''SELECT * FROM my_table''')
     >>> q.execute()
     >>> q.close()
     """
-    def __init__(self, query: str):
+    def __init__(self, query: str) -> None:
         self.query = query
         self._loop = asyncio.get_event_loop()
 
@@ -35,10 +41,15 @@ class Query:
 
 
 def correct_columns(vals: list) -> DataFrame:
-    """Append Correct Column Names to Asyncpg Records"""
+    """Append Correct Column Names to Asyncpg Records
+
+    :param vals: asyncpg response from SQL query
+    :type vals: list
+
+    :returns: sql query result
+    :rtype: pandas.DataFrame
+    """
     column_names = [i for i in vals[0].keys()]
-    # Convert response
-    # asyncpg.Records --> pandas.DataFrame
     data = DataFrame(vals)
     data.columns = column_names
     return data

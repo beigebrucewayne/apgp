@@ -1,17 +1,31 @@
+```text
+                  ___.-~"~-._   __....__
+                .'    `    \ ~"~        ``-.
+               /` _      )  `\              `\
+              /`  a)    /     |               `\
+             :`        /      |                 \
+        <`-._|`  .-.  (      /   .            `;\\
+         `-. `--'_.'-.;\___/'   .      .       | \\
+      _     /:--`     |        /     /        .'  \\
+     ("\   /`/        |       '     '         /    :`;
+     `\'\_/`/         .\     /`~`=-.:        /     ``
+       `._.'          /`\    |      `\      /(
+                     /  /\   |        `Y   /  \
+                    J  /  Y  |         |  /`\  \
+                   /  |   |  |         |  |  |  |
+                  "---"  /___|        /___|  /__|
+                         '"""         '"""  '"""
+```
 # Asynchronous Postgres to Pandas (APGP)
 Asynchronously read data from Postgres, returned as a Pandas dataframe.
 
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)
 
-![logo](https://i.imgur.com/JTKlXCC.png)
+## Features
 
-## Installation
+- Read data from Postgres (Redshift) into Pandas DataFrame
 
-```bash
-pip install apgp
-```
-
-## Example
+## Usage
 
 ```python
 from apgp import Query
@@ -48,4 +62,10 @@ host: 'host'
 port: 5439
 user: 'username'
 password: 'password'
+```
+
+## Installation
+
+```bash
+pip install apgp
 ```
