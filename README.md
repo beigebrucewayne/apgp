@@ -23,7 +23,7 @@ Asynchronously read data from Postgres, returned as a Pandas dataframe.
 
 ## Features
 
-- Read data from Postgres (Redshift) into Pandas DataFrame
+- Read data from Postgres (Redshift) into a Pandas DataFrame
 
 ## Usage
 
@@ -67,5 +67,5 @@ password: 'password'
 ## Installation
 
 ```bash
-pip install apgp
+$ pip install apgp
 ```
